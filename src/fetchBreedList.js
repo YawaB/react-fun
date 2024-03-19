@@ -1,4 +1,4 @@
-const FetchBreedList = async ({ querykey }) => {
+const fetchBreedList = async ({ querykey }) => {
   const animal = querykey[1];
   if (!animal) return [];
 
@@ -11,4 +11,4 @@ const FetchBreedList = async ({ querykey }) => {
   }
   return apiRes.json();
 };
-export default FetchBreedList;
+export default fetchBreedList;
