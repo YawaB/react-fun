@@ -1,5 +1,6 @@
 import Pet from "./Pet";
 
+/* eslint-disable react/react-in-jsx-scope */
 const Results = ({ pets }) => {
   return (
     <div className="search">

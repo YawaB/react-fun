@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+/* eslint-disable react/react-in-jsx-scope */
 const Pet = ({ name, animal, breed, images, location, id }) => {
   let hero = "https://pets-images.dev-apis.com/pets/none.png";
   if (images.length) {

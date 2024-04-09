@@ -12,8 +12,9 @@ const queryClient = new QueryClient({
     },
   },
 });
-
+/* eslint-disable react/react-in-jsx-scope */
 const App = () => {
+  const importantNumber= 5;
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
@@ -21,7 +22,7 @@ const App = () => {
           <Link to="/"> Adopt Me!</Link>
         </header>
         <Routes>
-          <Route path="/details/:id" element={<Details />} />
+          <Route path="/details/:id" element={<Details importantNumber={importantNumber} />} />
           <Route path="/" element={<SearchParams />} />
         </Routes>
       </QueryClientProvider>

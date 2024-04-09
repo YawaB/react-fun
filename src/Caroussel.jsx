@@ -1,7 +1,8 @@
 import { Component } from "react";
 
+/* eslint-disable react/react-in-jsx-scope */
 class Caroussel extends Component {
-  static defaulProps = {
+  static defaultProps = {
     images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
   };
   state = {
@@ -9,6 +10,7 @@ class Caroussel extends Component {
   };
   handleIndexClick = (event) => {
     this.setState({
+      //+ is to convert the string to a number
       active: +event.target.dataset.index,
     });
   };
@@ -21,6 +23,7 @@ class Caroussel extends Component {
         <img src={images[active]} alt="animal" />
         <div className="carousel-smaller">
           {images.map((photo, index) => (
+            // eslint-disable-next-line
             <img
               key={photo}
               src={photo}
@@ -35,5 +38,4 @@ class Caroussel extends Component {
     );
   }
 }
-
 export default Caroussel;

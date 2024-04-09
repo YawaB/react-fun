@@ -1,13 +1,12 @@
-import { Component } from "react";
+import  { Component } from "react";
 import { Link } from "react-router-dom";
 
+/* eslint-disable react/react-in-jsx-scope */
 export default class ErrorBoundary extends Component {
   state = { hasError: false };
-
   static getDerivedStateFromError() {
     return { hasError: true };
   }
-
   componentDidCatch(error, info) {
     console.error("ErrorBoundary caught an error", error, info);
   }
@@ -16,10 +15,12 @@ export default class ErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <h2>
-          There was an error with this listing. <Link to="/">Click here</Link>{" "}
+          There was an error with this listing. <Link to="/">
+          Click here</Link>{" "}
           to go back to the home page.
         </h2>
       );
     }
+    return this.props.children;
   }
 }

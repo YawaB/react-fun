@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import fetchSearch from "./fetchSearch";
 
 const ANIMALS = ["cat", "dog", "bird"];
-
+/* eslint-disable react/react-in-jsx-scope */
 const SearchParams = () => {
   const [requestParams, setRequestParams] = useState({
     location: "",
